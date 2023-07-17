@@ -1,0 +1,1116 @@
+
+2023/07/13 00:04:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.559ms] [rows:-] SELECT DATABASE()
+
+2023/07/13 00:04:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[40.727ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/13 00:04:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[47.234ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/13 00:04:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[106.492ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`mobile` varchar(191) NOT NULL COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`created_at` datetime NULL,`updated_at` datetime NULL,`deleted_at` datetime NULL,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_deleted_at` (`deleted_at`))
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.460ms] [rows:-] SELECT DATABASE()
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.941ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.322ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[11.210ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.336ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.073ms] [rows:-] SELECT DATABASE()
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.403ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[9.374ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.848ms] [rows:-] SELECT DATABASE()
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.360ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/13 00:14:52 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.684ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.506ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[46.032ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[14.911ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[8.484ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[5.637ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.282ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:16:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.802ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/15 00:16:54 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:18 record not found
+[1.044ms] [rows:0] SELECT `id` FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/15 00:16:54 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:24
+[12.548ms] [rows:1] INSERT INTO `users` (`name`,`mobile`,`password`,`created_at`,`updated_at`,`deleted_at`) VALUES ('luzhishuang','18834368865','$2a$04$/QLBJ7KeglLYQGw2ojz4qOf3HKboA.Q5PeEVcoTFWxhDHCifqWNau','2023-07-15 00:16:54.529','2023-07-15 00:16:54.529',NULL)
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.099ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.598ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.727ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.544ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.638ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.010ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.331ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:31:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.616ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/15 00:33:04 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:30
+[1.018ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.326ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.940ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.959ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.705ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.495ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.535ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.536ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.528ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/15 00:38:35 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/15 00:38:38 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[1.222ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/15 00:38:48 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[1.416ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.535ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[9.426ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[6.757ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[5.037ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.265ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.946ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.058ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.796ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 22:46:16 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.715ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.455ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.980ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.723ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.944ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.079ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.416ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.468ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:03:28 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:04:26 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.785ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:16:56 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[13.850ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.645ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[5.561ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.109ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.076ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.513ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.879ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.819ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.671ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.619ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:21:51 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.514ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:21:59 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[1.322ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.080ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.310ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.131ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.375ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[2.924ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.917ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.726ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:35:07 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.647ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:35:19 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[2.412ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:35:26 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[1.030ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.088ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.103ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.132ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.357ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.430ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.076ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.432ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.781ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:36:27 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:36:50 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.885ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[8.638ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[2.685ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.053ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.758ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.086ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.191ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:39:45 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.877ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:39:46 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:39:46 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:39:46 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:39:56 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.532ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.431ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[3.116ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.393ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.453ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.108ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.812ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.054ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.179ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.543ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.545ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.521ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.539ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.739ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.022ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.219ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.577ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.775ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:45:58 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.763ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:46:28 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[1.899ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.630ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.624ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.981ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.416ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.552ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.054ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.248ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.676ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.957ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.531ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:47:47 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.539ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.916ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.989ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.548ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.727ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.721ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:48:15 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.207ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.392ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.824ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.356ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.392ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.549ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.644ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.553ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.757ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:50:33 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.800ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:50:40 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.681ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.392ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.189ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.342ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.564ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.639ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.633ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.499ms] [rows:-] SELECT DATABASE()
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.693ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/16 23:58:57 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.607ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/16 23:59:02 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.535ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:15 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.753ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:18 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.796ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:19 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[1.426ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:20 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.654ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:20 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[1.044ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:21 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.821ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:21 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.470ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:21 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[1.038ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:22 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.874ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/16 23:59:22 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.621ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.580ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.919ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.506ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.462ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.653ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.681ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.431ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.221ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.658ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:14:30 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[139.135ms] [rows:0] CREATE TABLE `media` (`id` bigint unsigned AUTO_INCREMENT,`disk_type` varchar(20) NOT NULL COMMENT '存储类型',`src_type` tinyint NOT NULL COMMENT '链接类型 1相对路径 2外链',`src` varchar(191) NOT NULL COMMENT '资源链接',`created_at` datetime NULL,`updated_at` datetime NULL,PRIMARY KEY (`id`),INDEX `idx_media_disk_type` (`disk_type`))
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.205ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.860ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.615ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.999ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.030ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[2.207ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.985ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.965ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.304ms] [rows:-] SELECT * FROM `media` LIMIT 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.030ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'media' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.746ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND index_name = 'idx_media_disk_type'
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.022ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.962ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.998ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.065ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.210ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.182ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.786ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.551ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.814ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.716ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.090ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.616ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.733ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.293ms] [rows:-] SELECT * FROM `media` LIMIT 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.634ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'media' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.388ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:15:38 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.623ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND index_name = 'idx_media_disk_type'
+
+2023/07/17 00:15:40 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:41
+[0.543ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[4.213ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.425ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.479ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.549ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:16:08 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.756ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.571ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.541ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.786ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.540ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.208ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.542ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.231ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.533ms] [rows:-] SELECT * FROM `media` LIMIT 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.026ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'media' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:16:09 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.718ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND index_name = 'idx_media_disk_type'
+
+2023/07/17 00:16:10 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[0.637ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.999ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[1.994ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.997ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.997ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.106ms] [rows:-] SELECT * FROM `media` LIMIT 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.864ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'media' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.503ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:17:49 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.542ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND index_name = 'idx_media_disk_type'
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.744ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[2.010ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.839ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[2.079ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.849ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.427ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.202ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.217ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.504ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT * FROM `media` LIMIT 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.701ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'gin_scaffold' AND table_name = 'media' ORDER BY ORDINAL_POSITION
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.000ms] [rows:-] SELECT DATABASE()
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.651ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'gin_scaffold%' ORDER BY SCHEMA_NAME='gin_scaffold' DESC,SCHEMA_NAME limit 1
+
+2023/07/17 00:18:02 D:/Go/workspace/src/gin_scaffold/src/bootstrap/db.go:107
+[0.630ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'gin_scaffold' AND table_name = 'media' AND index_name = 'idx_media_disk_type'
+
+2023/07/17 00:18:05 D:/Go/workspace/src/gin_scaffold/src/app/services/user.go:31
+[1.259ms] [rows:1] SELECT * FROM `users` WHERE mobile = '18834368865' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1

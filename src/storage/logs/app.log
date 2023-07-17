@@ -1,0 +1,32 @@
+{"level":"local.info","ts":"[2023-07-13 00:04:38.030]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-13 00:14:52.739]","caller":"src/main.go:14","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-15 00:16:30.792]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-15 00:31:27.027]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-15 00:38:35.406]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-16 22:46:16.800]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 22:46:16.977]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:03:28.421]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:03:28.544]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:21:51.547]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:21:51.722]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:35:07.690]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:35:07.811]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:36:27.393]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:36:27.517]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:39:45.970]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:39:46.092]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:45:49.316]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:45:49.444]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:45:58.276]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:45:58.398]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:47:47.884]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.error","ts":"[2023-07-16 23:47:55.998]","caller":"bootstrap/redis.go:18","msg":"Redis connect ping failed, err:","err":"dial tcp: lookup tcp/ᣫ: getaddrinfow: The specified class was not found."}
+{"level":"local.info","ts":"[2023-07-16 23:48:15.308]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-16 23:50:33.131]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-16 23:58:57.007]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:14:30.757]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:15:02.801]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:15:38.709]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:16:08.978]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:17:49.957]","caller":"src/main.go:17","msg":"log init success!"}
+{"level":"local.info","ts":"[2023-07-17 00:18:02.378]","caller":"src/main.go:17","msg":"log init success!"}

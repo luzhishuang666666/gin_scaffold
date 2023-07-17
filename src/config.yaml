@@ -1,0 +1,46 @@
+app:
+  env: local
+  port: 8888
+  app_name: gin_scaffold
+  app_url: http://127.0.0.1
+log:
+  level: info
+  root_dir: ./src/storage/logs
+  filename: app.log
+  format: json
+  show_line: true
+  max_backups: 3
+  max_size: 512
+  max_age: 30
+  compress: true
+database:
+  driver: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: gin_scaffold
+  username: root # 用户名
+  password: root # 密码
+  charset: utf8mb4
+  max_idle_conns: 10
+  max_open_conns: 100
+  log_mode: info
+  enable_file_log_writer: true
+  log_filename: sql.log
+jwt:
+  secret: 3Bde3BGEbYqtqyEUzW3ry8jKFcaPH17fRmTmqE7MDr05Lwj95uruRKrrkb44TJ4s
+  jwt_ttl: 43200
+  jwt_blacklist_grace_period: 10
+  refresh_grace_period: 1800
+redis:
+  host: 127.0.0.1
+  port: 6379
+  db: 0
+  password: 123456
+storage:
+  default: local # 默认驱动
+  disks:
+    local:
+      root_dir: ./storage/app # 本地存储根目录
+      app_url: http://localhost:8888/storage # 本地图片 url 前部
+
+
