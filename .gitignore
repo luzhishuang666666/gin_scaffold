@@ -1,2 +1,3 @@
 ./bin/*
 ./src/config.yaml
+./.idea
